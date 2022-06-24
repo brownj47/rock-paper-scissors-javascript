@@ -1,7 +1,3 @@
-// alert("message")
-
-// confirm("Are you ready to play?")
-
 
 var RPS = ["R", "P", "S"]
 var randNum = (Math.floor(Math.random() * RPS.length))
@@ -19,13 +15,10 @@ function startgame() {
         scoreboard()
         startgame()
     }
-
-
 }
 
 function winorlose(){
-
-    if (humanChoice == compChoice) {
+    if (humanChoice === compChoice) {
         alert("tie")
         tieCount = tieCount +1
     } else if (humanChoice == "R"){
@@ -53,6 +46,10 @@ function winorlose(){
             lossCount = lossCount +1
         }
     }
+    else {
+        alert("DEFEAT")
+        lossCount = lossCount +1
+    }
 }
 
 function scoreboard() {
@@ -61,8 +58,6 @@ function scoreboard() {
     Losses: ${lossCount}
     Ties: ${tieCount}`)
 }
-
-
 
 startgame()
 
